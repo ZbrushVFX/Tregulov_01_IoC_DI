@@ -9,19 +9,19 @@ public class Person {
     private String surname;
     private int age;
 
-    @Autowired
-    public Person(Pet pet) {
-        System.out.println("Person bean is created");
-        this.pet = pet;
-    }
-
-//    public Person() {
+//    @Autowired
+//    public Person(Pet pet) {
 //        System.out.println("Person bean is created");
+//        this.pet = pet;
 //    }
 
-    // pet -> setPet
-    public void setPet(Pet pet) {
-        System.out.println("Class Person set pet");
+    public Person() {
+        System.out.println("Person bean is created");
+    }
+
+    @Autowired
+    public void anyMethodName(Pet pet) {
+        System.out.println("Class Person: anyMethodName");
         this.pet = pet;
     }
 
